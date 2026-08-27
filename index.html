@@ -45,7 +45,7 @@
             backdrop-filter: blur(16px);
             border-bottom: 1px solid rgba(56, 189, 248, 0.4);
             box-shadow: 0 4px 30px rgba(14, 165, 233, 0.2);
-            padding: 12px 5%;
+            padding: 12px 4%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -54,29 +54,29 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
         }
 
         .logo-img {
-            width: 38px;
-            height: 38px;
+            width: 36px;
+            height: 36px;
             object-fit: cover;
             border-radius: 50%;
             border: 2px solid #38bdf8;
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
+            box-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         .logo-img:hover {
             transform: scale(1.1) rotate(10deg);
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.9);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.9);
         }
 
         .logo-text {
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             font-weight: 900;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             color: #ffffff;
             text-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
         }
@@ -85,58 +85,52 @@
             color: #38bdf8;
         }
 
-        /* Navigasi Desktop & Mobile Hamburger Menu */
+        /* Navigasi Utama */
         nav {
             display: flex;
-            gap: 8px;
+            gap: 6px;
             align-items: center;
         }
 
         .nav-link {
             color: #94a3b8;
             text-decoration: none;
-            font-size: 0.78rem;
+            font-size: 0.72rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding: 7px 12px;
+            letter-spacing: 0.3px;
+            padding: 6px 10px;
             border-radius: 6px;
             transition: all 0.3s ease;
             border: 1px solid transparent;
+            white-space: nowrap;
         }
 
         .nav-link:hover {
             color: #38bdf8;
             border-color: rgba(56, 189, 248, 0.4);
             background: rgba(56, 189, 248, 0.08);
-            box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
         }
 
         .nav-link.active {
             color: #38bdf8;
             background: rgba(56, 189, 248, 0.15);
             border: 1px solid #38bdf8;
-            box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+            box-shadow: 0 0 12px rgba(56, 189, 248, 0.3);
         }
 
-        /* Tombol Menu Web Utama & CV disesuaikan agar rapi seperti kolom lain */
-        .btn-web-utama {
-            background: rgba(56, 189, 248, 0.15);
+        /* Kolom Web Utama & Web CV dibuat seragam ukurannya seperti menu lain */
+        .btn-nav-custom {
+            background: rgba(56, 189, 248, 0.12);
             color: #38bdf8 !important;
-            border: 1px solid #38bdf8;
-            box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+            border: 1px solid rgba(56, 189, 248, 0.6);
+            box-shadow: 0 0 10px rgba(56, 189, 248, 0.2);
         }
 
-        .btn-cv {
-            background: linear-gradient(135deg, #0284c7, #6366f1);
-            color: #ffffff !important;
-            border: 1px solid #38bdf8;
+        .btn-nav-custom:hover {
+            background: rgba(56, 189, 248, 0.25);
+            border-color: #38bdf8;
             box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
-        }
-
-        .btn-cv:hover, .btn-web-utama:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 25px rgba(56, 189, 248, 0.8);
         }
 
         /* Hamburger Menu Icon untuk Android / Mobile */
@@ -144,7 +138,7 @@
             display: none;
             flex-direction: column;
             cursor: pointer;
-            gap: 5px;
+            gap: 4px;
             background: transparent;
             border: none;
             padding: 5px;
@@ -152,7 +146,7 @@
         }
 
         .hamburger span {
-            width: 25px;
+            width: 24px;
             height: 3px;
             background: #38bdf8;
             border-radius: 2px;
@@ -318,7 +312,6 @@
             font-size: 0.65rem;
         }
 
-        /* Tabel Responsif Android */
         .table-container {
             overflow-x: auto;
             animation: hologramFloat 7s ease-in-out infinite;
@@ -557,8 +550,8 @@
             <a href="#kurikulum" class="nav-link">Kurikulum</a>
             <a href="#praktik" class="nav-link">Praktik</a>
             <a href="#fasilitas" class="nav-link">Fasilitas</a>
-            <a href="https://sitzcave.github.io/kelompok-08-tjkt/" class="nav-link btn-web-utama">Web Utama</a>
-            <a href="https://sitzcave.github.io/cv-klmpk8/" class="nav-link btn-cv">Web CV Kelompok 8</a>
+            <a href="https://sitzcave.github.io/kelompok-08-tjkt/" class="nav-link btn-nav-custom">Web Utama</a>
+            <a href="https://sitzcave.github.io/cv-klmpk8/" class="nav-link btn-nav-custom">Web CV</a>
         </nav>
     </header>
 
@@ -754,17 +747,15 @@
             const hamburgerBtn = document.getElementById("hamburgerBtn");
             const navMenu = document.getElementById("navMenu");
 
-            // Toggle menu mobile (Android)
             hamburgerBtn.addEventListener("click", () => {
                 navMenu.classList.toggle("active");
             });
 
-            // Tutup menu saat link ditekan di HP
             navLinks.forEach((link) => {
                 link.addEventListener("click", function () {
                     navMenu.classList.remove("active");
                     navLinks.forEach((item) => item.classList.remove("active"));
-                    if(!this.classList.contains('btn-web-utama') && !this.classList.contains('btn-cv')) {
+                    if(!this.classList.contains('btn-nav-custom')) {
                         this.classList.add("active");
                     }
                 });
@@ -784,7 +775,7 @@
                     const href = link.getAttribute("href");
                     if (href && href.includes(`#${currentSection}`)) {
                         navLinks.forEach((item) => {
-                            if(!item.classList.contains('btn-web-utama') && !item.classList.contains('btn-cv')) {
+                            if(!item.classList.contains('btn-nav-custom')) {
                                 item.classList.remove("active");
                             }
                         });
