@@ -41,11 +41,11 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(3, 7, 18, 0.85);
+            background: rgba(3, 7, 18, 0.95);
             backdrop-filter: blur(16px);
             border-bottom: 1px solid rgba(56, 189, 248, 0.4);
             box-shadow: 0 4px 30px rgba(14, 165, 233, 0.2);
-            padding: 14px 5%;
+            padding: 12px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -54,18 +54,18 @@
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
         .logo-img {
-            width: 44px;
-            height: 44px;
+            width: 38px;
+            height: 38px;
             object-fit: cover;
             border-radius: 50%;
             border: 2px solid #38bdf8;
             box-shadow: 0 0 15px rgba(56, 189, 248, 0.6);
-            transition: all 0.3s ease;
             cursor: pointer;
+            transition: all 0.3s ease;
         }
 
         .logo-img:hover {
@@ -74,9 +74,9 @@
         }
 
         .logo-text {
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             font-weight: 900;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             color: #ffffff;
             text-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
         }
@@ -85,20 +85,21 @@
             color: #38bdf8;
         }
 
+        /* Navigasi Desktop & Mobile Hamburger Menu */
         nav {
             display: flex;
-            gap: 10px;
+            gap: 8px;
             align-items: center;
         }
 
         .nav-link {
             color: #94a3b8;
             text-decoration: none;
-            font-size: 0.82rem;
+            font-size: 0.78rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 8px 16px;
+            letter-spacing: 0.5px;
+            padding: 7px 12px;
             border-radius: 6px;
             transition: all 0.3s ease;
             border: 1px solid transparent;
@@ -118,6 +119,14 @@
             box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
         }
 
+        /* Tombol Menu Web Utama & CV disesuaikan agar rapi seperti kolom lain */
+        .btn-web-utama {
+            background: rgba(56, 189, 248, 0.15);
+            color: #38bdf8 !important;
+            border: 1px solid #38bdf8;
+            box-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+        }
+
         .btn-cv {
             background: linear-gradient(135deg, #0284c7, #6366f1);
             color: #ffffff !important;
@@ -125,20 +134,41 @@
             box-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
         }
 
-        .btn-cv:hover {
+        .btn-cv:hover, .btn-web-utama:hover {
             transform: translateY(-2px);
             box-shadow: 0 0 25px rgba(56, 189, 248, 0.8);
         }
 
+        /* Hamburger Menu Icon untuk Android / Mobile */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: transparent;
+            border: none;
+            padding: 5px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #38bdf8;
+            border-radius: 2px;
+            box-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
+            transition: all 0.3s ease;
+        }
+
         section {
-            padding: 80px 5%;
+            padding: 70px 5%;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 55px;
+            margin-bottom: 40px;
         }
 
         .badge-status {
@@ -156,31 +186,31 @@
         }
 
         .section-header h2 {
-            font-size: 2.4rem;
+            font-size: 2rem;
             font-weight: 900;
             color: #ffffff;
             text-transform: uppercase;
-            letter-spacing: 2px;
+            letter-spacing: 1.5px;
             text-shadow: 0 0 15px rgba(56, 189, 248, 0.5);
         }
 
         .section-header p {
             color: #94a3b8;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             margin-top: 8px;
         }
 
         #beranda {
             text-align: center;
-            padding-top: 80px;
-            padding-bottom: 100px;
+            padding-top: 50px;
+            padding-bottom: 70px;
         }
 
         #beranda h1 {
-            font-size: 3.4rem;
+            font-size: 2.5rem;
             font-weight: 900;
             color: #ffffff;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             line-height: 1.2;
             letter-spacing: 1px;
             text-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
@@ -195,8 +225,8 @@
         #beranda p {
             color: #94a3b8;
             max-width: 680px;
-            margin: 0 auto 35px;
-            font-size: 1.05rem;
+            margin: 0 auto 30px;
+            font-size: 0.98rem;
         }
 
         .btn-hero {
@@ -205,11 +235,11 @@
             gap: 10px;
             background: linear-gradient(135deg, #0284c7, #4f46e5);
             color: #ffffff;
-            padding: 16px 36px;
+            padding: 14px 28px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 800;
-            font-size: 1rem;
+            font-size: 0.95rem;
             border: 1px solid #38bdf8;
             box-shadow: 0 0 25px rgba(56, 189, 248, 0.5);
             transition: all 0.3s ease;
@@ -222,12 +252,12 @@
 
         .info-grid, .cards-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
         .info-card, .card-item, .table-container {
-            background: rgba(15, 23, 42, 0.5);
+            background: rgba(15, 23, 42, 0.6);
             border: 1px solid rgba(56, 189, 248, 0.35);
             border-radius: 16px;
             backdrop-filter: blur(14px);
@@ -240,34 +270,21 @@
             cursor: pointer;
         }
 
-        .info-card::before, .card-item::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%;
-            width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.15), transparent);
-            transition: left 0.6s ease;
-        }
-
-        .info-card:hover::before, .card-item:hover::before {
-            left: 100%;
-        }
-
         .info-card:hover, .card-item:hover {
-            transform: translateY(-12px) scale(1.02);
+            transform: translateY(-8px) scale(1.01);
             border-color: #38bdf8;
             box-shadow: 0 0 35px rgba(56, 189, 248, 0.5), inset 0 0 25px rgba(56, 189, 248, 0.2);
         }
 
         .info-card {
-            padding: 32px;
+            padding: 28px;
         }
 
         .info-card h3 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: #ffffff;
             font-weight: 800;
-            margin-bottom: 14px;
+            margin-bottom: 12px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -276,8 +293,8 @@
 
         .info-card p {
             color: #94a3b8;
-            font-size: 0.92rem;
-            line-height: 1.7;
+            font-size: 0.88rem;
+            line-height: 1.6;
         }
 
         .info-card ul {
@@ -287,10 +304,10 @@
 
         .info-card ul li {
             position: relative;
-            padding-left: 20px;
+            padding-left: 18px;
             margin-bottom: 8px;
             color: #cbd5e1;
-            font-size: 0.88rem;
+            font-size: 0.85rem;
         }
 
         .info-card ul li::before {
@@ -298,10 +315,12 @@
             position: absolute;
             left: 0;
             color: #38bdf8;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
         }
 
+        /* Tabel Responsif Android */
         .table-container {
+            overflow-x: auto;
             animation: hologramFloat 7s ease-in-out infinite;
         }
 
@@ -309,30 +328,26 @@
             width: 100%;
             border-collapse: collapse;
             text-align: left;
+            min-width: 600px;
         }
 
         th, td {
-            padding: 18px 24px;
+            padding: 15px 20px;
             border-bottom: 1px solid rgba(56, 189, 248, 0.15);
         }
 
         th {
             background: rgba(56, 189, 248, 0.12);
             color: #38bdf8;
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
+            letter-spacing: 1.2px;
             font-weight: 800;
         }
 
         td {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #e0f2fe;
-        }
-
-        tr {
-            cursor: pointer;
-            transition: all 0.3s;
         }
 
         tr:hover td {
@@ -345,18 +360,18 @@
             background: rgba(99, 102, 241, 0.2);
             color: #818cf8;
             border: 1px solid rgba(99, 102, 241, 0.5);
-            padding: 4px 10px;
+            padding: 4px 8px;
             border-radius: 6px;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 800;
         }
 
-        .badge-expert { color: #4ade80; font-weight: 800; font-size: 0.8rem; text-shadow: 0 0 8px rgba(74, 222, 128, 0.6); }
-        .badge-advanced { color: #38bdf8; font-weight: 800; font-size: 0.8rem; text-shadow: 0 0 8px rgba(56, 189, 248, 0.6); }
+        .badge-expert { color: #4ade80; font-weight: 800; font-size: 0.75rem; }
+        .badge-advanced { color: #38bdf8; font-weight: 800; font-size: 0.75rem; }
 
         .card-img-wrapper {
             width: 100%;
-            height: 200px;
+            height: 180px;
             overflow: hidden;
             position: relative;
         }
@@ -375,22 +390,21 @@
         }
 
         .card-body {
-            padding: 24px;
-            flex-grow: 1;
+            padding: 20px;
         }
 
         .card-body h3 {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             color: #ffffff;
             font-weight: 800;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             text-shadow: 0 0 8px rgba(56, 189, 248, 0.4);
         }
 
         .card-body p {
-            font-size: 0.88rem;
+            font-size: 0.84rem;
             color: #94a3b8;
-            line-height: 1.6;
+            line-height: 1.5;
         }
 
         .modal-overlay {
@@ -402,7 +416,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 15px;
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.3s ease;
@@ -416,8 +430,8 @@
         .modal-box {
             background: rgba(15, 23, 42, 0.95);
             border: 2px solid #38bdf8;
-            border-radius: 20px;
-            max-width: 680px;
+            border-radius: 18px;
+            max-width: 600px;
             width: 100%;
             max-height: 85vh;
             overflow-y: auto;
@@ -433,7 +447,7 @@
 
         .modal-header {
             position: relative;
-            height: 240px;
+            height: 200px;
             background: rgba(3, 7, 18, 0.5);
             display: flex;
             align-items: center;
@@ -448,61 +462,79 @@
 
         .close-btn {
             position: absolute;
-            top: 15px;
-            right: 15px;
+            top: 12px;
+            right: 12px;
             background: rgba(3, 7, 18, 0.8);
             color: #38bdf8;
             border: 1px solid #38bdf8;
-            width: 36px;
-            height: 36px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.2s;
             box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
             z-index: 10;
         }
 
-        .close-btn:hover {
-            background: #38bdf8;
-            color: #030712;
-        }
-
         .modal-content {
-            padding: 28px;
+            padding: 22px;
         }
 
         .modal-title {
-            font-size: 1.35rem;
+            font-size: 1.2rem;
             color: #ffffff;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-weight: 800;
-            text-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
         }
 
         .modal-desc {
             color: #cbd5e1;
-            font-size: 0.92rem;
+            font-size: 0.88rem;
             line-height: 1.6;
         }
 
         footer {
             border-top: 1px solid rgba(56, 189, 248, 0.3);
-            padding: 30px 20px;
+            padding: 25px 15px;
             text-align: center;
-            font-size: 0.85rem;
+            font-size: 0.78rem;
             color: #64748b;
             background: #030712;
-            margin-top: 60px;
+            margin-top: 40px;
         }
 
         footer span {
             color: #38bdf8;
             font-weight: 800;
-            text-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+        }
+
+        /* Media Query Khusus Android / Mobile Screen (< 992px) */
+        @media (max-width: 992px) {
+            body { padding-top: 80px; }
+            .hamburger { display: flex; }
+            nav {
+                position: fixed;
+                top: 70px;
+                right: -100%;
+                width: 250px;
+                height: calc(100vh - 70px);
+                background: rgba(3, 7, 18, 0.98);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 25px 20px;
+                gap: 12px;
+                border-left: 1px solid rgba(56, 189, 248, 0.3);
+                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.8);
+                transition: right 0.4s ease-in-out;
+            }
+            nav.active { right: 0; }
+            .nav-link { width: 100%; text-align: left; padding: 10px 14px; font-size: 0.85rem; }
+            #beranda h1 { font-size: 1.9rem; }
+            .section-header h2 { font-size: 1.6rem; }
         }
     </style>
 </head>
@@ -514,15 +546,19 @@
             <img src="logotkj.png" alt="Logo TKJ" class="logo-img" onclick="showTkjtInfo()">
             <div class="logo-text">SMK <span>BELA NUSANTARA</span></div>
         </div>
-        <nav>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="navMenu">
             <a href="#beranda" class="nav-link active">Beranda</a>
             <a href="#profil" class="nav-link">Profil</a>
             <a href="#kurikulum" class="nav-link">Kurikulum</a>
             <a href="#praktik" class="nav-link">Praktik</a>
             <a href="#fasilitas" class="nav-link">Fasilitas</a>
-            <a href="https://sitzcave.github.io/kelompok-08-tjkt/">Web Utama</a>
-            <a href="https://sitzcave.github.io/cv-klmpk8/">Lihat Web CV Kelompok 8</a>
-</nav>
+            <a href="https://sitzcave.github.io/kelompok-08-tjkt/" class="nav-link btn-web-utama">Web Utama</a>
+            <a href="https://sitzcave.github.io/cv-klmpk8/" class="nav-link btn-cv">Web CV Kelompok 8</a>
         </nav>
     </header>
 
@@ -530,7 +566,7 @@
         <span class="badge-status">HOLOGRAM SYSTEM PORTAL</span>
         <h1>HOLOGRAM SYSTEM <span>TKJ / TJKT</span></h1>
         <p>Pusat integrasi data kelompok 08, dokumentasi jaringan server, portofolio laboratorium, dan sistem CV interaktif siswa SMK Bela Nusantara Cianjur.</p>
-        <a href="http://cv-klmpk8.kel0mpok08.tkjbn.sch.id" class="btn-hero">
+        <a href="https://sitzcave.github.io/cv-klmpk8/" class="btn-hero">
             BUKA WEBPAGE CV KELOMPOK 08 &rarr;
         </a>
     </section>
@@ -715,6 +751,24 @@
         document.addEventListener("DOMContentLoaded", () => {
             const sections = document.querySelectorAll("section");
             const navLinks = document.querySelectorAll("header nav a");
+            const hamburgerBtn = document.getElementById("hamburgerBtn");
+            const navMenu = document.getElementById("navMenu");
+
+            // Toggle menu mobile (Android)
+            hamburgerBtn.addEventListener("click", () => {
+                navMenu.classList.toggle("active");
+            });
+
+            // Tutup menu saat link ditekan di HP
+            navLinks.forEach((link) => {
+                link.addEventListener("click", function () {
+                    navMenu.classList.remove("active");
+                    navLinks.forEach((item) => item.classList.remove("active"));
+                    if(!this.classList.contains('btn-web-utama') && !this.classList.contains('btn-cv')) {
+                        this.classList.add("active");
+                    }
+                });
+            });
 
             window.addEventListener("scroll", () => {
                 let currentSection = "";
@@ -727,18 +781,15 @@
                 });
 
                 navLinks.forEach((link) => {
-                    link.classList.remove("active");
                     const href = link.getAttribute("href");
                     if (href && href.includes(`#${currentSection}`)) {
+                        navLinks.forEach((item) => {
+                            if(!item.classList.contains('btn-web-utama') && !item.classList.contains('btn-cv')) {
+                                item.classList.remove("active");
+                            }
+                        });
                         link.classList.add("active");
                     }
-                });
-            });
-
-            navLinks.forEach((link) => {
-                link.addEventListener("click", function () {
-                    navLinks.forEach((item) => item.classList.remove("active"));
-                    this.classList.add("active");
                 });
             });
         });
@@ -757,106 +808,33 @@
         function openModulDetail(kodeModul) {
             let title = "";
             let desc = "";
-            const img = "logotkj.png";
 
             if(kodeModul === 'MOD-01') {
                 title = "MOD-01: Jaringan Komputer & Routing Dynamics";
-                desc = `
-                    <p><b>Deskripsi Pembelajaran:</b><br>Modul ini dirancang untuk melatih kemampuan merancang, mengonfigurasi, dan memelihara infrastruktur jaringan tingkat menengah hingga lanjut.</p><br>
-                    <p><b>Topik Pembahasan Detail:</b></p>
-                    <ul style="padding-left: 20px; color: #38bdf8;">
-                        <li><b>Perancangan Topologi & IP Addressing:</b> Alokasi subnet menggunakan teknik Variable Length Subnet Mask (VLSM) dan Classless Inter-Domain Routing (CIDR).</li>
-                        <li><b>VLAN & Trunking:</b> Segmentasi lalu lintas jaringan menggunakan IEEE 802.1Q VLAN dan enkapsulasi Trunking pada Switch.</li>
-                        <li><b>Dynamic Routing Protocols:</b> Konfigurasi OSPF (Open Shortest Path First) multi-area untuk pertukaran rute otomatis antar-router.</li>
-                        <li><b>Quality of Service (QoS):</b> Manajemen bandwidth dengan Simple Queue & Queue Tree MikroTik guna memastikan kestabilan koneksi.</li>
-                    </ul>
-                `;
+                desc = `<p><b>Deskripsi Pembelajaran:</b><br>Modul ini dilatih untuk merancang, mengonfigurasi, dan memelihara infrastruktur jaringan tingkat menengah hingga lanjut.</p><br><p><b>Topik Pembahasan:</b></p><ul style="padding-left: 20px; color: #38bdf8;"><li>Subnetting VLSM & CIDR</li><li>VLAN IEEE 802.1Q & Trunking</li><li>OSPF Multi-Area Routing</li><li>Quality of Service (QoS) Bandwidth</li></ul>`;
             } else if(kodeModul === 'MOD-02') {
                 title = "MOD-02: System Administration & Enterprise Services";
-                desc = `
-                    <p><b>Deskripsi Pembelajaran:</b><br>Fokus pada pengelolaan OS Server berbasis Command Line Interface (CLI) untuk menyediakan berbagai layanan jaringan berbasis Linux Debian.</p><br>
-                    <p><b>Topik Pembahasan Detail:</b></p>
-                    <ul style="padding-left: 20px; color: #38bdf8;">
-                        <li><b>Domain Name System (DNS):</b> Pembuatan zona forward dan reverse DNS menggunakan software BIND9.</li>
-                        <li><b>Web Server & Virtual Hosting:</b> Pengelolaan Web Server Apache2, dukungan protokol HTTPS dengan OpenSSL, dan multitenant domain.</li>
-                        <li><b>Automated Network Setup:</b> Deploy Server DHCP isc-dhcp-server untuk pembagian IP Address otomatis ke klien.</li>
-                        <li><b>File Sharing & Storage:</b> Integrasi Samba Server untuk berbagi data antar platform OS (Linux & Windows).</li>
-                    </ul>
-                `;
+                desc = `<p><b>Deskripsi Pembelajaran:</b><br>Pengelolaan OS Server berbasis CLI untuk layanan jaringan Linux Debian.</p><br><p><b>Topik Pembahasan:</b></p><ul style="padding-left: 20px; color: #38bdf8;"><li>BIND9 DNS Server</li><li>Apache2 Web Server & HTTPS</li><li>DHCP Server Configuration</li><li>Samba File Sharing Linux & Windows</li></ul>`;
             } else if(kodeModul === 'MOD-03') {
                 title = "MOD-03: Cybersecurity, Firewall & VPN Infrastructure";
-                desc = `
-                    <p><b>Deskripsi Pembelajaran:</b><br>Mengajarkan teknik proteksi server, mitigasi serangan cyber dasar, serta penyediaan jalur komunikasi terenkripsi antar cabang.</p><br>
-                    <p><b>Topik Pembahasan Detail:</b></p>
-                    <ul style="padding-left: 20px; color: #38bdf8;">
-                        <li><b>Firewall Filter & Raw Rules:</b> Pembatasan akses port, pemblokiran serangan Ping Flood (ICMP), dan penanganan Port Scanning.</li>
-                        <li><b>Network Address Translation (NAT):</b> Konfigurasi Src-NAT (Masquerade) dan Dst-NAT (Port Forwarding) server internal.</li>
-                        <li><b>Virtual Private Network (VPN):</b> Implementasi protokol enkripsi PPTP, L2TP/IPsec, dan WireGuard untuk remote access aman.</li>
-                    </ul>
-                `;
+                desc = `<p><b>Deskripsi Pembelajaran:</b><br>Proteksi server, mitigasi serangan cyber, serta jalur komunikasi terenkripsi.</p><br><p><b>Topik Pembahasan:</b></p><ul style="padding-left: 20px; color: #38bdf8;"><li>Firewall Filter Rules</li><li>NAT & Port Forwarding</li><li>VPN (PPTP, L2TP, WireGuard)</li></ul>`;
             } else if(kodeModul === 'MOD-04') {
                 title = "MOD-04: Fiber Optic & Telecommunication Infrastructure";
-                desc = `
-                    <p><b>Deskripsi Pembelajaran:</b><br>Mempelajari transmisi data kecepatan tinggi melalui media fisik kabel serat optik (Fiber Optic).</p><br>
-                    <p><b>Topik Pembahasan Detail:</b></p>
-                    <ul style="padding-left: 20px; color: #38bdf8;">
-                        <li><b>Pengupasan & Penyambungan Kabel:</b> Praktik pemotongan core (Cleaver) dan penyambungan otomatis menggunakan Fusion Splicer.</li>
-                        <li><b>Pengukuran Redaman Data:</b> Analisis ketersediaan sinyal dan titik putus kabel menggunakan alat OTDR (Optical Time Domain Reflectometer).</li>
-                        <li><b>Arsitektur FTTH & Distribution Box:</b> Penyambungan jalur dari Optical Distribution Cabinet (ODC) ke Optical Distribution Point (ODP).</li>
-                    </ul>
-                `;
+                desc = `<p><b>Deskripsi Pembelajaran:</b><br>Transmisi data kecepatan tinggi menggunakan kabel serat optik.</p><br><p><b>Topik Pembahasan:</b></p><ul style="padding-left: 20px; color: #38bdf8;"><li>Fusion Splicer Splicing</li><li>OTDR Measurement Redaman</li><li>ODC & ODP FTTH Wiring</li></ul>`;
             } else if(kodeModul === 'MOD-05') {
                 title = "MOD-05: Cloud Computing & Virtualization Technology";
-                desc = `
-                    <p><b>Deskripsi Pembelajaran:</b><br>Pemanfaatan teknologi virtualisasi modern untuk efisiensi penggunaan perangkat keras server.</p><br>
-                    <p><b>Topik Pembahasan Detail:</b></p>
-                    <ul style="padding-left: 20px; color: #38bdf8;">
-                        <li><b>Hypervisor Deployment:</b> Instalasi dan pengelolaan Bare-Metal Hypervisor berbasis Proxmox VE.</li>
-                        <li><b>Containerization:</b> Pengenalan Docker Container untuk mengisolasi aplikasi web dan database secara efisien.</li>
-                        <li><b>Private Cloud System:</b> Konfigurasi platform penyimpanan cloud pribadi menggunakan Nextcloud di jaringan lokal.</li>
-                    </ul>
-                `;
+                desc = `<p><b>Deskripsi Pembelajaran:</b><br>Pemanfaatan teknologi virtualisasi server modern.</p><br><p><b>Topik Pembahasan:</b></p><ul style="padding-left: 20px; color: #38bdf8;"><li>Proxmox VE Virtualization</li><li>Docker Container Management</li><li>Nextcloud Local Storage Cloud</li></ul>`;
             }
-
-            openModal(img, title, desc);
-        }
-
-        function showSchoolInfo() {
-            const title = "SYSTEM INFO: SMK BELA NUSANTARA CIANJUR";
-            const desc = `
-                <p><b>SMK Bela Nusantara Cianjur</b> merupakan institusi pendidikan kejuruan berstandar tinggi yang berfokus pada pengembangan keahlian teknologi informasi dan kedisiplinan prajurit digital.</p><br>
-                <p><b>Keunggulan & Program Unggulan:</b></p>
-                <ul style="padding-left: 20px; color: #38bdf8;">
-                    <li><b>Pendidikan Karakter:</b> Pembentukan mental tangguh, disiplin, dan etika profesi tinggi.</li>
-                    <li><b>Fasilitas Laboratorium Modern:</b> Lab komputer lengkap berpendingin ruangan dengan spesifikasi perangkat keras kelas industri.</li>
-                    <li><b>Kemitraan Industri:</b> Kerjasama Praktik Kerja Lapangan (PKL) dan penyerapan lulusan dengan berbagai perusahaan TI ternama.</li>
-                    <li><b>Sertifikasi Kompetensi:</b> Uji kompetensi resmi terstandar BNSP & industri nasional.</li>
-                </ul>
-            `;
-            openModal('logo-bn1.png', title, desc);
-        }
-
-        function showTkjtInfo() {
-            const title = "SYSTEM INFO: TEKNIK JARINGAN KOMPUTER & TELEKOMUNIKASI";
-            const desc = `
-                <p><b>TJKT / TKJ SMK Bela Nusantara</b> mencetak Network Architect & System Administrator profesional yang siap mengelola infrastruktur data skala besar.</p><br>
-                <p><b>Profil Lulusan & Peluang Karir:</b></p>
-                <ul style="padding-left: 20px; color: #38bdf8;">
-                    <li><b>Network Engineer:</b> Ahli perancang dan pengelola jaringan LAN/WAN perusahaan.</li>
-                    <li><b>System Administrator:</b> Pengelola operasional server Linux dan Windows Server.</li>
-                    <li><b>Fiber Optic Technician:</b> Spesialis instalasi dan pemeliharaan kabel serat optik FTTH/ISP.</li>
-                    <li><b>Cyber Security Analyst Specialist:</b> Petugas pemantau dan penjaga keamanan lalu lintas data.</li>
-                </ul>
-            `;
             openModal('logotkj.png', title, desc);
         }
 
-        window.onclick = function(event) {
-            const modal = document.getElementById('imageModal');
-            if (event.target === modal) {
-                closeModal();
-            }
-        };
+        function showSchoolInfo() {
+            openModal('logo-bn1.png', 'SMK Bela Nusantara Cianjur', '<b>Profil Singkat:</b><br>Lembaga pendidikan kejuruan unggulan yang berfokus pada kedisiplinan dan penguasaan teknologi digital masa kini.');
+        }
+
+        function showTkjtInfo() {
+            openModal('logotkj.png', 'Program Keahlian TJKT / TKJ', '<b>Kompetensi Utama:</b><br>Mencetak tenaga ahli jaringan komputer, teknisi fiber optik, dan administrator server berpengalaman.');
+        }
     </script>
 </body>
 </html>
